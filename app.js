@@ -20,7 +20,6 @@ for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
     client.cmds.set(command.cmd, command);
     data.push({ cmd: command.cmd, run: command.run });
-
 }
 
 client.on("messageCreate", (msg) => {
